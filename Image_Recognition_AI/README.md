@@ -1,4 +1,4 @@
-#Image Recognition AI with MNIST, CIFAR-10, and Transfer Learning
+**Image Recognition AI with MNIST, CIFAR-10, and Transfer Learning**
 
 This project contains a comprehensive deep learning project 
 focused on image recognition. 
