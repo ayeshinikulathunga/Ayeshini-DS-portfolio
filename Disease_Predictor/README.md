@@ -1,13 +1,13 @@
 # Heart Disease Predictor
 
-This project demonstrates a machine learning pipeline for predicting 
-the presence of heart disease using a dataset from the UCI Machine Learning Repository. 
+This project is an end-to-end machine learning pipeline for predicting heart disease, culminating in a deployed, user-friendly web application. The goal is to not only build an accurate predictive model but also to make health insights accessible and understandable to different audiences, from medical professionals to patients and their families.
 
-It showcases key steps in a data science workflow, including data preprocessing, 
-exploratory data analysis, model training, and evaluation.
+## Key Features
 
-The goal of this project is to build a predictive model that 
-can classify patients as having or not having heart disease based on their clinical and demographic data.
+* End-to-End Pipeline: A comprehensive workflow covering data acquisition, cleaning, exploratory data analysis (EDA), model training, and deployment.
+* Multi-Model Approach: Explores two distinct classification models, Logistic Regression and Random Forest Classifier, for performance comparison.
+* User-Centric Application: Deployed a Streamlit web application with a unique multi-mode interface that tailors the language and information based on the user's role (Professional, Patient, or Family).
+* Predictive Insights: Identifies the most impactful clinical features in heart disease prediction using feature importance analysis from the Random Forest model.
 
 ## Project Structure
 
@@ -16,6 +16,10 @@ can classify patients as having or not having heart disease based on their clini
 * heart_disease_rf_model.pkl: A serialized machine learning model (Random Forest Classifier).
 * heart_scaler.pkl: A serialized scaler object for standardizing feature data.
 * heart_dataset.csv :  A sample dataset used to demonstrate predictions on new data.
+* app_streamlit.py: The main Python script for the deployed web application.
+* requirements.txt: A list of all Python libraries required to run the project.
+* README.md: The project overview and documentation file.
+* feature_columns.pkl: A serialized file containing the list of feature columns used during training, ensuring consistency when making new predictions.
 
 ## Methodology
 
@@ -35,19 +39,22 @@ can classify patients as having or not having heart disease based on their clini
    - The trained Random Forest model and the StandardScaler are saved using joblib for future use.
    - The script demonstrates how to load the saved model and scaler to make predictions on new, unseen data provided in a separate CSV file.
 
+* Deployment & Application
+    - An app_streamlit.py script was developed to serve the model as a web application, allowing users to input data and receive instant, interpretable predictions.
+    - The application's different modes present information in a way that is relevant and understandable to a diverse audience.
+
 ## Libraries Used
   * Pandas
   * Matplotlib 
   * Seaborn
   * Scikit-learn
   * joblib
+  * streamlit
 
 ## Future Improvements
-   * Model Deployment: The trained model can be deployed as a web application or an API, allowing users to input their data and receive real-time predictions.
-   * Advanced Modeling: More complex machine learning algorithms, such as Gradient Boosting Machines, Support Vector Machines, or even a simple neural network, could be explored to potentially improve predictive accuracy.
-   * Interpretability: Techniques like SHAP (SHapley Additive exPlanations) or LIME (Local Interpretable Model-agnostic Explanations) could be used to provide detailed insights into why the model made a specific prediction for a given patient.
-   * Automated Data Pipelines: The entire process could be automated using a data pipeline tool to regularly update the model with new data, ensuring it remains accurate and relevant.
-  
+   * Continuous Integration/Continuous Deployment (CI/CD): Implement a CI/CD pipeline to automate the deployment process.
+   * Advanced Algorithms: Explore more complex models like Gradient Boosting or Neural Networks to potentially enhance predictive accuracy.
+   * Enhanced Interpretability: Integrate tools like SHAP or LIME to provide deeper, more granular explanations for individual predictions.
   
 
 
