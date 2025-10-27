@@ -53,3 +53,4 @@ Part 5 : Simple Streamlit App (Deployment)
     * Customize detection parameters (e.g., confidence threshold)
     * Optionally upload their own custom trained YOLO weights
     * View the annotated results and a structured data table of detections
+    * The annotated results of the video mode can be downloaded
